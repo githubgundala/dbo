@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "35b8e657e9e0f39970f37eddb6788e1e",
+    "content-hash": "56a42650ab8ed4f143a645facb1f7606",
     "packages": [
         {
             "name": "appointer/swaggervel",
@@ -1572,21 +1572,22 @@
         },
         {
             "name": "infyomlabs/swagger-generator",
-            "version": "v1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/InfyOmLabs/swagger-generator.git",
-                "reference": "267c274b5628bfad6ec85397a5f8943b8d3ffc10"
+                "reference": "ac751db9f306f32efcb88abc94ed86b8ad8caa8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/InfyOmLabs/swagger-generator/zipball/267c274b5628bfad6ec85397a5f8943b8d3ffc10",
-                "reference": "267c274b5628bfad6ec85397a5f8943b8d3ffc10",
+                "url": "https://api.github.com/repos/InfyOmLabs/swagger-generator/zipball/ac751db9f306f32efcb88abc94ed86b8ad8caa8a",
+                "reference": "ac751db9f306f32efcb88abc94ed86b8ad8caa8a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.9"
             },
+            "default-branch": true,
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1607,7 +1608,7 @@
             ],
             "support": {
                 "issues": "https://github.com/InfyOmLabs/swagger-generator/issues",
-                "source": "https://github.com/InfyOmLabs/swagger-generator/tree/v1.0.0"
+                "source": "https://github.com/InfyOmLabs/swagger-generator/tree/master"
             },
             "funding": [
                 {
@@ -1615,7 +1616,7 @@
                     "type": "opencollective"
                 }
             ],
-            "time": "2021-05-10T09:56:40+00:00"
+            "time": "2022-02-22T11:08:48+00:00"
         },
         {
             "name": "laracasts/flash",
@@ -8909,7 +8910,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "appointer/swaggervel": 20
+        "appointer/swaggervel": 20,
+        "infyomlabs/swagger-generator": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

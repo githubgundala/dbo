@@ -25,7 +25,7 @@
         "laravel/tinker": "^2.5",
         "rezaamini-ir/migrator": "^1.5",
         "appointer/swaggervel": "dev-master",
-        "infyomlabs/swagger-generator": "^1.0"
+        "infyomlabs/swagger-generator": "dev-master"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

@@ -8,10 +8,31 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+/**
+ * @SWG\Definition(
+ *      definition="User",
+ *      required={"name", "email", "password"},
+ *      @SWG\Property(
+ *          property="name",
+ *          description="name",
+ *          type="string",
+ *      ),
+ *      @SWG\Property(
+ *          property="email",
+ *          description="email",
+ *          type="string"
+ *      ),
+ *      @SWG\Property(
+ *          property="password",
+ *          description="password",
+ *          type="string"
+ *      )
+ * )
+ */
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
-
     /**
      * The attributes that are mass assignable.
      *
@@ -40,5 +61,16 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
+    ];
+
+    /**
+     * The attributes that should be rules.
+     *
+     * @var array<string, string>
+     */
+    public static $rules = [
+        'name' => 'required|string|max:255',
+        'email' => 'required|string|email:rfc,dns|unique:users,email',
+        'password' => 'required|min:6'
     ];
 }
