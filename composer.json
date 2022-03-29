@@ -7,6 +7,12 @@
         "laravel"
     ],
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:InfyOmLabs/swaggervel.git"
+        }
+    ],
     "require": {
         "php": "^7.3|^8.0",
         "doctrine/dbal": "~2.3",
@@ -17,7 +23,9 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.14",
         "laravel/tinker": "^2.5",
-        "rezaamini-ir/migrator": "^1.5"
+        "rezaamini-ir/migrator": "^1.5",
+        "appointer/swaggervel": "dev-master",
+        "infyomlabs/swagger-generator": "^1.0"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
