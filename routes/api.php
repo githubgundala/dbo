@@ -30,6 +30,7 @@ Route::middleware(['auth:sanctum'])->group(function () {
     Route::resource('costumer', UserAPIController::class)->except([
         'login', 'register', 'show'
     ]);
+    Route::post('logout', [UserAPIController::class, 'logout']);
     Route::resource('orders', OrderAPIController::class);
 });
 // });

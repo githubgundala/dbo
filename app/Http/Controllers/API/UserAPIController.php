@@ -305,4 +305,11 @@ class UserAPIController extends AppBaseController
 
         return $this->sendResponse($user->toArray(), 'Costumer saved successfully');
     }
+
+    public function logout(Request $request)
+    {
+        $request->user()->currentAccessToken()->delete();
+
+        return $this->sendSuccess('Successfully Logged out');
+    }
 }
