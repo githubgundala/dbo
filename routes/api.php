@@ -16,9 +16,16 @@ use App\Http\Controllers\API\OrderAPIController;
 |
 */
 
+
+
 Route::prefix('auth')->group(function () {
     Route::post('login', [UserAPIController::class, 'login']);
     Route::post('register', [UserAPIController::class, 'register']);
+    Route::any('{path}', function () {
+        return response()->json([
+            'message' => 'End point not found!',
+        ], 404);
+    });
 });
 
 Route::middleware('auth:sanctum')->get('/me', function (Request $request) {
@@ -31,6 +38,12 @@ Route::middleware(['auth:sanctum'])->group(function () {
         'login', 'register', 'show'
     ]);
     Route::post('logout', [UserAPIController::class, 'logout']);
-    Route::resource('orders', OrderAPIController::class);
+    Route::resource('order', OrderAPIController::class);
 });
 // });
+
+Route::any('{path}', function () {
+    return response()->json([
+        'message' => 'End point not found!',
+    ], 404);
+});

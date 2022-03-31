@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\User;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -53,14 +54,14 @@ class Order extends Model
     use HasFactory;
 
     public $table = 'orders';
-    
+
 
     protected $dates = ['deleted_at'];
 
 
 
     public $fillable = [
-        'id_user',
+        'user_id',
         'uuid',
         'description',
         'price'
@@ -72,7 +73,7 @@ class Order extends Model
      * @var array
      */
     protected $casts = [
-        'id_user' => 'integer',
+        'user_id' => 'integer',
         'uuid' => 'string',
         'description' => 'string',
         'price' => 'float'
@@ -84,11 +85,14 @@ class Order extends Model
      * @var array
      */
     public static $rules = [
-        'id_user' => 'required',
+        // 'user_id' => 'required',
         'uuid' => 'required',
         'description' => 'required',
         'price' => 'required'
     ];
 
-    
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

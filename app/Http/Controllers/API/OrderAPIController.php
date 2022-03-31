@@ -108,6 +108,8 @@ class OrderAPIController extends AppBaseController
     {
         $input = $request->all();
 
+        $input['user_id'] = $request->user()->id;
+
         $order = $this->orderRepository->create($input);
 
         return $this->sendResponse($order->toArray(), 'Order saved successfully');

@@ -4,6 +4,7 @@ namespace App\Http\Requests\API;
 
 use App\Models\User;
 use InfyOm\Generator\Request\APIRequest;
+use Illuminate\Support\Facades\Validator;
 
 class UpdateUserAPIRequest extends APIRequest
 {
@@ -25,7 +26,9 @@ class UpdateUserAPIRequest extends APIRequest
     public function rules()
     {
         $rules = User::$rules;
-        
+
+        $rules['email'] = $rules['email'] . ',' . $this->user()->id;
+        Validator::make($this->all(), $rules);
         return $rules;
     }
 }

@@ -2,11 +2,12 @@
 
 namespace App\Models;
 
+use App\Models\Order;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
 /**
  * @SWG\Definition(
@@ -73,4 +74,9 @@ class User extends Authenticatable
         'email' => 'required|string|email:rfc,dns|unique:users,email',
         'password' => 'required|min:6'
     ];
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }

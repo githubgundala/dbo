@@ -1,0 +1,503 @@
+{
+	"info": {
+		"_postman_id": "9847ad95-4be7-4bb5-9d0f-815817ed6eab",
+		"name": "DBO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Costumer",
+			"item": [
+				{
+					"name": "Costumer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Dimas Sadim mis",
+									"description": "M",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "dimas@gmail.com",
+									"description": "M",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"description": "M",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/costumer/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"costumer",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Costumer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/costumer",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"costumer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Costumer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{url}}/costumer/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"costumer",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Costumer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Dimas",
+									"description": "M",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "dimas@gmail.com",
+									"description": "M",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"description": "M",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "uuid",
+									"value": "uuid-123",
+									"description": "M",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Beli semen dong",
+									"description": "M",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "10000",
+									"description": "M",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/order/12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/order",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{url}}/order/12",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "uuid",
+									"value": "uuid-123123",
+									"description": "M",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Beli semen",
+									"description": "M",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "10000",
+									"description": "M",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/order",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "dimas@gmail.com",
+									"description": "M",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"description": "M",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Dimas",
+									"description": "M",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "dimas@gmail.com",
+									"description": "M",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password123",
+									"description": "M",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/auth/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://dbo.test/api",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "5|D0SXrjWuEbZlJ3LmgMKAGiP8UQb58L5gzIou5MV6",
+			"type": "string"
+		}
+	]
+}
